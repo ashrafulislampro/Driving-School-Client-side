@@ -1,0 +1,16 @@
+.table_data{
+          width: 280px;
+          padding-top: 30px!important;
+}
+.table_email{
+          width: 400px;
+          padding-top: 30px!important;
+}
+.select_part{
+          background-color: rgb(241, 235, 235);;
+          border-style: none;
+}
+.select::after{
+          content: " ";
+          color: red !important;
+}

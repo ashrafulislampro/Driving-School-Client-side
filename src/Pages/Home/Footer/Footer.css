@@ -1,0 +1,8 @@
+.footer_section{
+          height: 800px;
+          background-image: url('../../../images/footer-bg.png');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          padding: 100px;
+}

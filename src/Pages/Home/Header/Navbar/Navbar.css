@@ -1,0 +1,19 @@
+.logo {
+  height: 37px;
+  filter: invert(99%) sepia(70%) saturate(6638%) hue-rotate(329deg)
+    brightness(94%) contrast(85%);
+}
+.logo_text {
+  color: white;
+  font-weight: 700;
+  font-family: "Bebas Neue", cursive;
+}
+#nav-dropdown {
+  color: white;
+  font-weight: bold;
+}
+#nav-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}

@@ -1,0 +1,40 @@
+.content{
+        width: 60vw;
+        height: 35vh; 
+        padding: 20px 0 0 30px;
+        border-radius: 10px;
+        background-color: #fff; 
+}
+.form_content label input{
+          width: 430px;
+          height: 45px;
+}
+.upload-image{
+          position: relative;
+          display: inline-block;
+}
+.upload_button{
+          width: 170px;
+          height: 40px;
+          background-color: rgb(238, 159, 107);
+          border-color: transparent;
+
+}
+.upload-image input{
+          position: absolute;
+          width: 170px !important;
+          height: 40px;
+          opacity: 0;
+}
+.add_submit{
+          float: right;
+          margin-right: 215px;
+          width: 150px;
+          height: 40px;
+          background-color: rgb(62, 190, 37);
+          border-color: transparent;
+          border-radius: 10px;
+          color: white;
+          font-weight: bold;
+          font-size: 17px;
+}

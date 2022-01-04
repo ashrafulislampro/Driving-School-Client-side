@@ -1,0 +1,27 @@
+.common_area{
+          background: rgb(241, 235, 235);
+          height: 80vh;
+          width: 75vw;
+}
+.input_field{
+          height: 45px;
+}
+/* simpleCardForm style area */
+.card_field{
+          width: 440px !important;
+          height: 40px;
+}
+.part{
+          width: 210px !important;
+          height: 40px;
+}
+.payButton{
+          width: 150px;
+          height: 40px;
+          background: tomato;
+          border-radius: 10px;
+          border-color: transparent;
+          font-size: 18px;
+          color: white;
+          font-weight: bold;
+}

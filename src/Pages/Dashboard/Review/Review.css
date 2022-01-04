@@ -1,0 +1,35 @@
+.submit{
+          float: right;
+          margin-top: 15px;
+          width: 150px;
+          height: 40px;
+          background-color: tomato;
+          border-color: transparent;
+          border-radius: 10px;
+          color: white;
+          font-size: 18px;
+          font-weight: bold;
+}
+.upload_image{
+          position: relative;
+          display: inline-block;
+          margin-top: 5px;
+}
+.upload_btn{
+          width: 150px;
+          height: 40px;
+          margin-top: 10px;
+          background-color: tomato;
+          border-color: transparent;
+          border-radius: 10px;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+}
+.upload_image input{
+          position: absolute;
+          top: 0px;
+          left: 5px;
+          width: 140px;
+          opacity: 0; 
+}

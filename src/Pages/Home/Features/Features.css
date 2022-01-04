@@ -1,0 +1,12 @@
+.features_section{
+          height: 760px;
+          padding: 100px 0;
+          background-color: rgb(230, 230, 230);
+}
+.icons{
+          height: 30px;
+          filter: invert(74%) sepia(82%) saturate(420%) hue-rotate(359deg) brightness(91%) contrast(70%);
+}
+.feature_text:hover{
+          background-color: rgb(255, 255, 255);
+}

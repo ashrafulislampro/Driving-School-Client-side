@@ -1,0 +1,38 @@
+.price_section{
+          height: 850px;
+          position: relative;
+          padding-top: 100px;
+}
+.price_section::after{
+          content: " ";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          z-index: -1;
+          background-image: url('../../../images/car4.jpg');
+          top: 0;
+}
+
+
+/*price card style*/
+.card_content{
+          text-align: center;
+          width: 18rem;
+          height: 32rem;
+          background: none;
+          position: relative;
+}
+.header, .footer{
+          background: #e5bf29 !important;
+          color: white;
+}
+.header:hover, .footer:hover{
+          background: white !important;
+          color: black;
+}
+.card_content:hover{
+          background: rgb(182, 182, 182);
+}

@@ -1,0 +1,17 @@
+.instructor_section{
+          height: 830px;
+          padding-top: 100px;
+          background-color: #F4FDFB;
+}
+.contact_icon{
+          width: 37px;
+          border: 1px solid gray;
+          padding: 5px;
+}
+.contact_icon:hover{
+          background: #e5bf29;
+          filter: invert(68%) sepia(88%) saturate(407%) hue-rotate(3deg) brightness(104%) contrast(200%);
+}
+.instruction_img{
+          width: 150px;
+}

@@ -1,0 +1,23 @@
+.sidebar_section{
+          height: 98vh;
+          width: 100%;
+          background-image: linear-gradient(75deg, #4976e9,#3A4256);
+         
+}
+.sidebar_section ul li{
+          margin-left: 43px;
+          padding-top: 20px;
+}
+.sidebar_section ul li span{
+          display: inline-block;
+          color: #fff;
+
+}
+.sidebar_section li:hover{
+          color: #f7df07;
+          filter: invert(86%) sepia(48%) saturate(1009%) hue-rotate(344deg) brightness(100%) contrast(111%) !important;
+}
+.booked_icon{
+          width: 14px;
+          filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(2deg) brightness(107%) contrast(107%);
+}

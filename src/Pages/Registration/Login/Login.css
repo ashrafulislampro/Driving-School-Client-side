@@ -1,0 +1,67 @@
+.ship_form{
+          margin: 30px;     
+}
+
+.login_section::after{
+          content: "";
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          z-index: -1;
+          background-image: url('../../../images/car9.jpg');
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          top: 0;
+
+}
+.ship_form input{
+          display: block;
+          margin: 20px auto;
+          padding: 5px;
+          border: 1px solid gray;
+          border-radius: 5px;
+          width: 310px;
+          height: 45px;
+}
+
+.btns{
+          display: block;
+          margin: 7px auto;
+          width:  350px;
+          height : 38px;
+          border-radius: 16px;
+          border-style: none;
+          background-color: #99da84;
+          
+}
+.icon{
+          float: left;
+          width: 30px;
+}
+.form_container{
+          border-radius: 5px;
+          width: 560px;
+          padding: 25px;
+          height: auto;
+          text-align: center;
+          margin: 30px auto;
+          background-color: rgb(238, 238, 238);
+}
+.login_container{
+          border: 1px solid grey;
+          width: 500px;
+          height: 400px;
+          margin: 30px auto;
+          background: rgb(240, 240, 240);
+          border-radius: 10px;
+} 
+.login_container input[type="submit"],.form_container input[type="submit"]{
+          width: 310px;
+          height: 45px;
+          margin-top: 10px;
+          background-color: #71BA58;
+          border: none;
+          color: white;
+          border-radius: 10px;
+}

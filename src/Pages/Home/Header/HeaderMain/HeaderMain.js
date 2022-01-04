@@ -1,0 +1,119 @@
+import React from "react";
+import { Button } from "react-bootstrap";
+import "../Header.css";
+import icon from '../../../../images/car-compact.png';
+import { useHistory } from "react-router-dom";
+import { useForm } from "react-hook-form";
+const HeaderMain = () => {
+  const history = useHistory();
+  const handleBookButton =()=>{
+    history.push('/bookingList')
+  }
+  const handleLearnButton=()=>{
+    history.push('/commonIssue');
+  }
+  const { register, handleSubmit } = useForm();
+  const onSubmit = data => {
+    console.log(data)
+    if(data) {
+      alert("Your Information Send Successfully")
+    }
+  };
+  return (
+    <section className="container header_content d-flex align-items-center">
+      <div className="row">
+        <div className="col-md-8 header_text table-sell">
+          <h3 className="wow fadeInUp" data-wow-duration='0.9s' data-wow-delay='0.8s'>WELCOME TO DRIVE ONE</h3>
+          <h1 className="py-1 wow fadeInUp" data-wow-delay='1.2s' data-wow-duration='0.9s'>
+            THE BEST <span>SAFETY</span> MEASURES
+          </h1>
+          <p className="wow fadeInUp" data-wow-delay='1.6s' data-wow-duration='0.9s'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            impedit dignissimos optio rem, eum assumenda natus. Nihil, odio
+            alias aut quos incidunt quidem numquam sit voluptates. Doloribus
+            quisquam corrupti eaque.
+          </p>
+          <div className="d-flex pt-3 wow fadeInLeft" data-wow-duration=".9s" data-wow-delay="2.4s">
+            <Button onClick={handleBookButton} variant="warning" className="button">
+              BOOK LESSON
+            </Button>
+            <Button onClick={handleLearnButton} variant="light" className="btn ms-3 wow fadeInLeft"  data-wow-duration=".9s" data-wow-delay="2s">
+              LEARN MORE
+            </Button>
+          </div>
+        </div>
+        <div className="col-md-4">
+          <div className="form_card ms-5">
+           <div className="top_content">
+           <h5>FIND YOUR COURSE</h5>
+           <img className="icon" src={icon} alt="" />
+           </div>
+            <form className="p-3 form" onSubmit={handleSubmit(onSubmit)}>
+              <input
+                type="text"
+                className="form-control mt-2"
+                name="name"
+                placeholder="Your Name"
+                required
+                {...register('name', { required : true})}
+              />
+              <input
+                type="email"
+                className="form-control mt-2"
+                name="email"
+                placeholder="Your E-mail"
+                required
+                {...register('email', { required : true})}
+              />
+              <input
+                type="tel"
+                className="form-control mt-2"
+                name="phone"
+                placeholder="Phone"
+                required
+                {...register('phone', { required : true})}
+              />
+              <div className="row">
+                <div className="col-6">
+                  <input type="time" className="form-control mt-2"
+                   name="time" placeholder="Time"
+                   required
+                   {...register('time', { required : true})}
+                     />
+                </div>
+                <div className="col-6">
+                  <input type="date" className="form-control mt-2"
+                   name="date" placeholder="Date"
+                   required
+                   {...register('date', { required : true})}
+                     />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-6">
+                  <select className="form-control mt-2" {...register('course', { required : true})} required name="course" id="text_select">
+                    <option value="Not selected" disabled>Course Type</option>
+                    <option value="course1">Course 1</option>
+                    <option value="course2">Course 2</option>
+                    <option value="course3">Course 3</option>
+                  </select>
+                </div>
+                <div className="col-6">
+                  <select className="form-control mt-2" {...register('car', { required : true})} required name="car" id="text_select">
+                    <option value="Not selected" disabled>Car Type</option>
+                    <option value="car1">Car 1</option>
+                    <option value="car2">Car 2</option>
+                    <option value="car3">Car 3</option>
+                  </select>
+                </div>
+              </div>
+              <input className="form-control mt-4" id="submit_btn" type="submit" value="Send Us" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeaderMain;
