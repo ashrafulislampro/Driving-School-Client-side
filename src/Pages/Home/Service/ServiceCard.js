@@ -4,7 +4,6 @@ import { UserContext } from "../../../App";
 
 const ServiceCard = (props) => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const [courseData, setCourseData] = useContext(UserContext);
   const service = props.service;
   const { imageURL, title, description, price } =service;
   const history = useHistory();
@@ -26,7 +25,6 @@ const ServiceCard = (props) => {
     })
     .then(res => res.json())
     .then(data => console.log(data));
-    setCourseData(courseInfo);
     history.push('/book');
     
   }
