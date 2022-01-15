@@ -10,20 +10,20 @@ import "swiper/css/scrollbar";
 const Review = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch('https://gentle-gorge-81848.herokuapp.com/allReviews')
-    .then(res => res.json())
-    .then(data => {
-      if(data.length > 0){
-        toggleSpinner();
-        setReviews(data);
-      }
-      
-    })
+    fetch("https://gentle-gorge-81848.herokuapp.com/allReviews")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.length > 0) {
+          toggleSpinner();
+          setReviews(data);
+        }
+      });
   }, []);
-  const toggleSpinner =()=>{
+
+  const toggleSpinner = () => {
     const spinner = document.getElementById("spinner-buffer");
     spinner.classList.toggle("d-none");
-  }
+  };
   return (
     <section className="review_section">
       <div>
@@ -34,13 +34,16 @@ const Review = () => {
           Testimonials
         </h4>
       </div>
-      
+
       <div className="container">
-      <div id="spinner-buffer" className="d-done d-flex justify-content-center pt-4">
-        <div className="spinner-border text-warning" role="status">
+        <div
+          id="spinner-buffer"
+          className="d-done d-flex justify-content-center pt-4"
+        >
+          <div className="spinner-border text-warning" role="status">
             <span className="visually-hidden">Loading...</span>
+          </div>
         </div>
-      </div>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={40}
@@ -52,12 +55,11 @@ const Review = () => {
           onSwiper={(swiper) => console.log(swiper)}
         >
           <div className="row mt-5">
-            {reviews.map((reviewInfo) =>  <SwiperSlide key={reviewInfo._id}>
-              <ReviewCard
-                reviewInfo={reviewInfo}
-                
-              ></ReviewCard>
-            </SwiperSlide>)}
+            {reviews.map((reviewInfo) => (
+              <SwiperSlide key={reviewInfo._id}>
+                <ReviewCard reviewInfo={reviewInfo}></ReviewCard>
+              </SwiperSlide>
+            ))}
           </div>
         </Swiper>
       </div>
