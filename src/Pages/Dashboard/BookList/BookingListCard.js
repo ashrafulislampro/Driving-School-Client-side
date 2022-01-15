@@ -19,7 +19,6 @@ const BookingListCard = (props) => {
         </div>
         <div className="card-body">
           <h5 className="card-title text-uppercase">{courseInfo.title}</h5>
-
           <p className="card-text">{courseInfo.description}</p>
         </div>
       </div>

@@ -28,14 +28,12 @@ const useOptions = () => {
     }),
     []
   );
-
   return options;
 };
 const SimpleCardForm = () => {
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
-
   const handleSubmit = async (event) => {
     
 

@@ -17,8 +17,6 @@ const Order = () => {
         setOrders(data)
       });
   }, []);
-  
-
   const handleStatus = (event, id) => {
     const status = event.target.value;
     const statusInfo = {id, status};
@@ -33,13 +31,6 @@ const Order = () => {
         alert('Update Status Successfully')
       }
     })
-  //  const status = event.target.value;
-  //  console.log(status, id);
-  //  axios.put(`https://gentle-gorge-81848.herokuapp.com/update/${id}`,{
-  //    status
-  //  })
-  //  .then(result => console.log(result.data));
-
   }
   console.log(orders)
   return (

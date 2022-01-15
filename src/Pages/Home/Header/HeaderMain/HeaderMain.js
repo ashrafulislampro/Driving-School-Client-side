@@ -14,7 +14,6 @@ const HeaderMain = () => {
   }
   const { register, handleSubmit } = useForm();
   const onSubmit = data => {
-    console.log(data)
     if(data) {
       alert("Your Information Send Successfully")
     }

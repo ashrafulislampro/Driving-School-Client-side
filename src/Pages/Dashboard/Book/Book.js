@@ -20,8 +20,7 @@ const Book = () => {
     console.log(data);
    
   };
-//  console.log(courseData)
- console.log(loggedInUser);
+
   return (
     <section className="container-fluid">
       <div className="row">

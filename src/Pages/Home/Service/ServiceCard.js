@@ -17,18 +17,16 @@ const ServiceCard = (props) => {
       status: 'Pending',
       description: course.description
     }
-    
-
+    const newCourseInfo ={...loggedInUser, courseInfo};
     fetch('https://gentle-gorge-81848.herokuapp.com/addCourse',{
       method: 'POST',
       headers: { 'Content-type': 'application/json'},
-      body: JSON.stringify({courseInfo, email: loggedInUser.email, name: loggedInUser.name})
+      body: JSON.stringify({newCourseInfo})
     })
     .then(res => res.json())
     .then(data => console.log(data));
     setCourseData(courseInfo);
     history.push('/book');
-    
   }
   return (
     <section onClick={() => handleServiceCard(service)} className="col-md-3 service_container mb-30 fix text-center">

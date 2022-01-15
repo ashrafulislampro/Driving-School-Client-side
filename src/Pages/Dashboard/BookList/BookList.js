@@ -6,7 +6,6 @@ import BookingListCard from "./BookingListCard";
 
 const BookList = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  
   const [courseInfo, setCourseInfo] = useState([]);
   useEffect(() => {
     fetch("https://gentle-gorge-81848.herokuapp.com/booking?email=" + loggedInUser.email)
