@@ -12,8 +12,17 @@ const Review = () => {
   useEffect(() => {
     fetch('https://gentle-gorge-81848.herokuapp.com/allReviews')
     .then(res => res.json())
-    .then(data => setReviews(data))
+    .then(data => {
+      if(data.length > 0){
+        toggleSpinner();
+        setReviews(data);
+         }
+      })
   }, []);
+  const toggleSpinner =() =>{
+      const spinner = document.getElementById("spinner-buffer");
+      spinner.classList.toggle("d-none");
+  }
   return (
     <section className="review_section">
       <div>
@@ -26,6 +35,11 @@ const Review = () => {
       </div>
 
       <div className="container">
+        <div id="spinner-buffer" className="d-done d-flex justify-content-center pt-4">
+        <div className="spinner-border text-warning" role="status">
+            <span className="visually-hidden">Loading...</span>
+         </div>
+         </div>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={40}
