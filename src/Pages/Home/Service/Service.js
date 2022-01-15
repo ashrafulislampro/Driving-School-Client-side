@@ -11,8 +11,17 @@ const Service = () => {
   useEffect(() => {
     fetch("https://gentle-gorge-81848.herokuapp.com/allService")
       .then((res) => res.json())
-      .then((data) => setServiceInfo(data));
+      .then((data) => {
+      if(data.length > 0){
+        toggleSpinner();
+        setServiceInfo(data);
+      }
+    });
   }, []);
+  const toggleSpinner = () =>{
+   const spinner = document.getElementById("spinner_buffer");
+   spinner.classList.toggle("d-none");
+  }
   return (
     <section className="service_section">
       <div className="container">
@@ -28,6 +37,11 @@ const Service = () => {
             <hr />
           </div>
         </div>
+       <div id="spinner_buffer" className="d-done d-flex justify-content-center">
+        <div className="spinner-border text-warning" role="status">
+            <span className="visually-hidden">Loading...</span>
+         </div>
+         </div>
         <div className="container-fluid mt-5 pt-5">
           <Swiper
             modules={[Navigation, Pagination, A11y]}
