@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { UserContext } from "../../../App";
+import { UserContext } from './../../../App';
+
 
 const ServiceCard = (props) => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const [courseData, setCourseData] = useContext(UserContext);
   const service = props.service;
   const { imageURL, title, description, price } =service;
   const history = useHistory();
@@ -17,15 +18,14 @@ const ServiceCard = (props) => {
       status: 'Pending',
       description: course.description
     }
-    const newCourseInfo ={...loggedInUser, courseInfo};
+    
     fetch('https://gentle-gorge-81848.herokuapp.com/addCourse',{
       method: 'POST',
       headers: { 'Content-type': 'application/json'},
-      body: JSON.stringify({newCourseInfo})
+      body: JSON.stringify({courseInfo, email:loggedInUser.email, name:loggedInUser.name})
     })
     .then(res => res.json())
     .then(data => console.log(data));
-    setCourseData(courseInfo);
     history.push('/book');
   }
   return (

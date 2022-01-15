@@ -20,7 +20,7 @@ const Book = () => {
     console.log(data);
    
   };
-
+  console.log(loggedInUser.email, loggedInUser.name);
   return (
     <section className="container-fluid">
       <div className="row">
