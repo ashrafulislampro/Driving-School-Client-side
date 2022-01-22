@@ -13,8 +13,7 @@ const Features = () => {
         <div className="feature_text_content text-center">
           <h2 className="heading_text">OUR FEATURES</h2>
           <p className="text-secondary">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Exercitationem, quam.
+             Features That We Provide
           </p>
           <div className="heading_separator">
             <div className="separator_line"></div>

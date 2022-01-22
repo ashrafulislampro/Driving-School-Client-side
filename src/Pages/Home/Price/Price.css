@@ -36,6 +36,9 @@
 .card_content:hover{
           background: rgb(182, 182, 182);
 }
+.price_content{
+          margin: 50px 0;
+}
 @media screen and (max-width: 1300px){
           .card_content{
                     width: 100%;
