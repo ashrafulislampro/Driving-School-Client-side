@@ -29,12 +29,14 @@ const ServiceCard = (props) => {
     history.push('/book');
   }
   return (
-    <section onClick={() => handleServiceCard(service)} className="col-md-3 service_container mb-30 fix text-center">
+    <section onClick={() => handleServiceCard(service)} className="col-md-3">
+      <div className=" service_container mb-30 fix text-center">
       <div className="service_card">
         <img className="icons" src={imageURL} alt="" />
         <h5 className="text-uppercase">{title}</h5>
          <h4><sup>$</sup>{price}</h4>
         <p>{description}</p>
+      </div>
       </div>
     </section>
   );

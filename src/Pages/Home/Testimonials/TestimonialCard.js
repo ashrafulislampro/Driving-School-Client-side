@@ -1,7 +1,7 @@
 import React from "react";
-import { Button, Card } from "react-bootstrap";
-import "./Review.css";
-const ReviewCard = (props) => {
+import { Card } from "react-bootstrap";
+import "./Testimonial.css";
+const TestimonialCard = (props) => {
   const { name, title, description, img } = props.reviewInfo;
   return (
     <section className="col-md-3 py-5 mt-5 pt-5">
@@ -21,4 +21,4 @@ const ReviewCard = (props) => {
   );
 };
 
-export default ReviewCard;
+export default TestimonialCard;

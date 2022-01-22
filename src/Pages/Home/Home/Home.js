@@ -4,8 +4,8 @@ import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Instructor from '../Instructor/Instructor';
 import Price from '../Price/Price';
-import Review from '../Reviews/Review';
 import Service from '../Service/Service';
+import Testimonials from '../Testimonials/Testimonial';
 
 const Home = () => {
           return (
@@ -13,8 +13,8 @@ const Home = () => {
                           <Header></Header>
                           <Features></Features> 
                           <Service></Service>
-                          <Review></Review> 
-                          <Instructor></Instructor>  
+                           <Testimonials></Testimonials> 
+                         <Instructor></Instructor>  
                           <Price></Price>
                           <Footer></Footer>
                     </main>

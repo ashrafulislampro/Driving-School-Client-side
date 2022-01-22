@@ -111,7 +111,7 @@ const Navbar1 = () => {
               ) : (
                 <Button
                   onClick={handleButton}
-                  style={{ marginLeft: "20px", fontWeight: "bold", marginTop: "-7px"}}
+                  style={{fontWeight: "bold", marginTop: "-5px"}}
                   variant="warning"
                 >
                   Login

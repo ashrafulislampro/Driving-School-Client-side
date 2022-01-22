@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./Service.css";
 import ServiceCard from "./ServiceCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, A11y } from "swiper";
+import { Navigation, Pagination, A11y, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/autoplay";
 const Service = () => {
   const [serviceInfo, setServiceInfo] = useState([]);
   useEffect(() => {
@@ -26,16 +27,16 @@ const Service = () => {
   return (
     <section className="service_section">
       <div className="container">
-        <div className="text-white text-center py-5">
-          <h5 className="py-2 fw-bold">Services</h5>
-          <h2 className="fw-bold">COURSE CATEGORY</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta,
-            culpa!
+      <div className="text-center">
+          <h2 className="heading_text text-white">COURSE CATEGORY</h2>
+          <p className="text-white">
+            We provide this kind of service
           </p>
-          <div className="w-25 text-center m-auto">
-            <hr />
-            <hr />
+          <div className="heading_separator">
+            <div className="separator_line"></div>
+            <div className="separator_blob">
+              <div></div>
+            </div>
           </div>
         </div>
         <div
@@ -46,13 +47,53 @@ const Service = () => {
             <span className="visually-hidden">Loading...</span>
           </div>
         </div>
-        <div className="container-fluid mt-5 pt-5">
+        <div className="container">
           <Swiper
-            modules={[Navigation, Pagination, A11y]}
-            spaceBetween={40}
+            breakpoints={{
+               360:{
+                 width: 360,
+                 slidesPerView: 1
+               },
+               375:{
+                 width: 360,
+                 slidesPerView: 1
+               },
+               600:{
+                 width: 600,
+                 slidesPerView: 2,
+                 spaceBetween: 20
+               },
+               810:{
+                 width: 810,
+                 slidesPerView: 2,
+                 spaceBetween: 15
+               },
+               920:{
+                  width: 920,
+                  slidesPerView: 3,
+                  spaceBetween: 10
+               },
+               1110:{
+                 width: 1110,
+                 slidesPerView: 3,
+                 spaceBetween: 10
+               },
+               1300:{
+                 width: 1300,
+                 slidesPerView: 4,
+                 spaceBetween: 10
+               }
+            }}
+            modules={[Navigation, Pagination, A11y, Autoplay]}
+            spaceBetween={10}
             slidesPerView={4}
             navigation
-            pagination={{ clickable: true }}
+            loop={Infinity}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction:false
+            }}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >

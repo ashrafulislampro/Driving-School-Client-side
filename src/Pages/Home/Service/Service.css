@@ -1,6 +1,7 @@
 /* service full section */
 .service_section {
-  height: 800px;
+  height: 100%;
+  padding: 140px 0;
   position: relative;
   z-index: 1;
 }
@@ -89,4 +90,54 @@
 }
 .service_card:hover h4 {
   color: #fff;
+}
+.swiper-container {
+  width: 1300px;
+}
+@media screen and (min-width: 1300px) {
+  .swiper-container {
+    width: 1300px;
+  }
+  
+}
+
+@media screen and (min-width: 1110px) {
+  .swiper-container {
+    width: 1110px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .swiper-container {
+    width: 920px;
+  }
+}
+@media screen and (min-width: 810px) {
+  .swiper-container {
+    width: 810px;
+  }
+  .swiper-slide{
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .swiper-container {
+    width: 600px;
+  }
+}
+@media screen and (min-width: 375px) {
+  .swiper-container {
+    width: 360px;
+  }
+  .swiper-slide{
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 360px) {
+  .swiper-container {
+    width: 360px;
+  }
+  .swiper-slide{
+    justify-content: center;
+  }
 }

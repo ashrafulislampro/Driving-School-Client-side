@@ -1,8 +1,16 @@
 .footer_section{
-          height: 800px;
+          height: 100%;
           background-image: url('../../../images/footer-bg.png');
           background-repeat: no-repeat;
           background-position: center center;
           background-size: cover;
-          padding: 100px;
+          padding: 100px 0;
+}
+.instruction_img_footer{
+          height: 75px;
+}
+@media screen and (max-width: 1300px) {
+          .instruction_img_footer{
+                    height: 65px;
+          }      
 }

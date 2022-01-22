@@ -1,14 +1,24 @@
-import React from 'react';
-import './Price.css';
-import PriceCard from './PriceCard';
+import React from "react";
+import "./Price.css";
+import PriceCard from "./PriceCard";
 const Price = () => {
-          return (
-                    <section className="price_section">
-                              <h2 style={{ color: "#3A4256", fontWeight: "700" }} className="text-center pb-3">YOUR PRICING PLAN</h2>
-                              <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aliquid</p>
-                              <PriceCard></PriceCard>
-                    </section>
-          );
+  return (
+    <section className="price_section">
+      <div className="text-center">
+        <h2 className="heading_text">YOUR PRICING PLAN</h2>
+        <p className="text-secondary">
+          Which is pricing category do you like?
+        </p>
+        <div className="heading_separator">
+          <div className="separator_line"></div>
+          <div className="separator_blob">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <PriceCard></PriceCard>
+    </section>
+  );
 };
 
 export default Price;

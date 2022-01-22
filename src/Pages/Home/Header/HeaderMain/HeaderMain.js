@@ -4,6 +4,7 @@ import "../Header.css";
 import icon from '../../../../images/car-compact.png';
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import './HeadersMain.css';
 const HeaderMain = () => {
   const history = useHistory();
   const handleBookButton =()=>{
@@ -19,30 +20,33 @@ const HeaderMain = () => {
     }
   };
   return (
-    <section className="container header_content d-flex align-items-center">
+    <section className="header_container">
+    <div className="container">
       <div className="row">
-        <div className="col-md-8 header_text table-sell">
-          <h3 className="wow fadeInUp" data-wow-duration='0.9s' data-wow-delay='0.8s'>WELCOME TO DRIVE ONE</h3>
-          <h1 className="py-1 wow fadeInUp" data-wow-delay='1.2s' data-wow-duration='0.9s'>
+        <div className="col-sm-12 col-md-6 col-lg-8">
+          <div className="header_text">
+          <h3>WELCOME TO DRIVE ONE</h3>
+          <h1>
             THE BEST <span>SAFETY</span> MEASURES
           </h1>
-          <p className="wow fadeInUp" data-wow-delay='1.6s' data-wow-duration='0.9s'>
+          <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
             impedit dignissimos optio rem, eum assumenda natus. Nihil, odio
             alias aut quos incidunt quidem numquam sit voluptates. Doloribus
             quisquam corrupti eaque.
           </p>
-          <div className="d-flex pt-3 wow fadeInLeft" data-wow-duration=".9s" data-wow-delay="2.4s">
+          <div className="d-flex pt-3">
             <Button onClick={handleBookButton} variant="warning" className="button">
               BOOK LESSON
             </Button>
-            <Button onClick={handleLearnButton} variant="light" className="btn ms-3 wow fadeInLeft"  data-wow-duration=".9s" data-wow-delay="2s">
+            <Button onClick={handleLearnButton} variant="light" className="btn ms-3">
               LEARN MORE
             </Button>
           </div>
+          </div>
         </div>
-        <div className="col-md-4">
-          <div className="form_card ms-5">
+        <div className="col-sm-12 col-md-6 col-lg-4">
+          <div className="form_card">
            <div className="top_content">
            <h5>FIND YOUR COURSE</h5>
            <img className="icon" src={icon} alt="" />
@@ -110,6 +114,7 @@ const HeaderMain = () => {
             </form>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

@@ -1,17 +1,73 @@
-.instructor_section{
-          height: 830px;
-          padding-top: 100px;
-          background-color: #F4FDFB;
+.instructor_section {
+  height: 100%;
+  padding: 100px 0;
+  background-color: #f4fdfb;
 }
-.contact_icon{
-          width: 37px;
-          border: 1px solid gray;
-          padding: 5px;
+.instructor_img {
+  width: 100%;
+  height: 100%;
 }
-.contact_icon:hover{
-          background: #e5bf29;
-          filter: invert(68%) sepia(88%) saturate(407%) hue-rotate(3deg) brightness(104%) contrast(200%);
+.contact_icon {
+  width: 37px;
+  border: 1px solid gray;
+  padding: 5px;
+  margin-top: 60px;
 }
-.instruction_img{
-          width: 150px;
+.contact_icon:hover {
+  background: #e5bf29;
+  filter: invert(68%) sepia(88%) saturate(407%) hue-rotate(3deg)
+    brightness(104%) contrast(200%);
+}
+.instruction_img {
+  width: 150px;
+  margin-top: 65px;
+  cursor: pointer;
+  position: relative;
+}
+.instruction_img:hover{
+          background-image: linear-gradient(40deg, #e5bf29 , #423a18);
+          opacity: 0.3;
+}
+/* .instruction_img::before{
+          content:"";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          position: absolute;
+          background-image: linear-gradient(40deg, #e5bf29 , #423a18);
+          opacity: 0.5;
+} */
+@media screen and (max-width: 1385px) {
+  .instruction_img {
+    width: 130px;
+  }
+  .instruction_img_details {
+          margin-top: 50px;
+        }
+        .contact_icon{
+                  margin-top: 20px;
+        }
+}
+@media screen and (max-width: 1200px) {
+  .instruction_img {
+    width: 110px;
+  }
+}
+@media screen and (max-width: 975px) {
+  .instruction_img {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 810px) {
+  .instruction_img_details {
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .instructor_img {
+    margin-top: 20px;
+  }
+  .instruction_img_details {
+    margin-top: 10px;
+  }
 }
