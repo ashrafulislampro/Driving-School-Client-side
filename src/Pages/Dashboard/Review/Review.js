@@ -63,7 +63,7 @@ const Review = () => {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="form-control book_input"
+                  className="form-control book-input"
                   required
                   {...register("name", { required: true })}
                 />
@@ -71,7 +71,7 @@ const Review = () => {
                 <input
                   type="text"
                   placeholder="Company's name or Designation"
-                  className="form-control book_input mt-3"
+                  className="form-control book-input mt-3"
                   required
                   {...register("title", { required: true })}
                 />
