@@ -34,7 +34,7 @@ const Book = () => {
       status: 'Pending',
       description: newCourseData.description
   };
-  fetch('http://localhost:5000/addBooking',{
+  fetch('https://gentle-gorge-81848.herokuapp.com/addBooking',{
     method: 'POST',
     headers: { 'Content-type': 'application/json'},
     body: JSON.stringify({courseInfo, email:loggedInUser.email, name:loggedInUser.name})
