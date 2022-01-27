@@ -21,13 +21,9 @@ import CommonIssue from "./Pages/CommonIssue/CommonIssue";
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  // const [courseData, setCourseData] = useState({
-  //   title: '',
-  //   price: ''
-   
-  // });
+  const [course, setCourse] = useState({});
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser], [course, setCourse]}>
     <Router>
       <Switch>
         <Route path="/home">
@@ -54,12 +50,12 @@ function App() {
         <PrivateRoute path="/bookingList">
           <BookList/>
         </PrivateRoute>
-        <PrivateRoute path="/book">
+        <PrivateRoute path="/book/:id">
           <Book/>
         </PrivateRoute>
         <PrivateRoute path="/book">
           <Book/>
-        </PrivateRoute>
+        </PrivateRoute> 
         <PrivateRoute path="/review">
           <Review/>
         </PrivateRoute>

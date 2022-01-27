@@ -1,27 +1,96 @@
-.common_area{
-          background: rgb(241, 235, 235);
-          height: 80vh;
-          width: 75vw;
+.common_area {
+  background: rgb(241, 235, 235);
+  height: 80%;
+  width: 100%;
 }
-.input_field{
-          height: 45px;
+.input_field {
+  height: 45px;
+  width: 600px !important;
+}
+.book_area {
+  padding: 25px;
+}
+.submit_button{
+  background-color: #62b8ea !important;
+  color: #fff !important;
+  font-weight: bold !important;
 }
 /* simpleCardForm style area */
-.card_field{
-          width: 440px !important;
-          height: 40px;
+.card_field {
+  width: 440px !important;
+  height: 40px;
 }
-.part{
-          width: 210px !important;
-          height: 40px;
+.part {
+  width: 210px !important;
+  height: 40px;
 }
-.payButton{
-          width: 150px;
-          height: 40px;
-          background: tomato;
-          border-radius: 10px;
-          border-color: transparent;
-          font-size: 18px;
-          color: white;
-          font-weight: bold;
+.payButton {
+  width: 150px;
+  height: 40px;
+  background: tomato;
+  border-radius: 10px;
+  border-color: transparent;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+@media screen and (max-width: 1300px) {
+  .input_field {
+    height: 43px;
+    width: 450px !important;
+  }
+  .book_area {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .input_field {
+    height: 43px;
+    width: 450px !important;
+  }
+  .book_area {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 920px) {
+  .input_field {
+    height: 43px;
+    width: 420px !important;
+  }
+  .book_area {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 810px) {
+  .input_field {
+    height: 43px;
+    width: 410px !important;
+  }
+  .book_area {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .input_field {
+    height: 43px;
+    width: 350px !important;
+  }
+  .book_area {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .input_field {
+    height: 43px;
+    width: 330px !important;
+  }
+  .book_area {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .input_field {
+    height: 43px;
+    width: 320px !important;
+  }
 }

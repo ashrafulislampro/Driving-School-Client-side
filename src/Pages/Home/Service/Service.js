@@ -25,7 +25,7 @@ const Service = () => {
     spinner.classList.toggle("d-none")
   }
   return (
-    <section className="service_section">
+    <section id="service" className="service_section">
       <div className="container">
       <div className="text-center">
           <h2 className="heading_text text-white">COURSE CATEGORY</h2>

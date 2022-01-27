@@ -56,7 +56,7 @@ const SimpleCardForm = () => {
       <label>
         Card number
         <CardNumberElement
-          className="form-control card_field"
+          className="form-control"
           options={options}
           onReady={() => {
             console.log("CardNumberElement [ready]");
@@ -72,7 +72,6 @@ const SimpleCardForm = () => {
           }}
         />
       </label>
-      <br />
       <div className="row">
         <div className="col-md-6">
           <label className="mt-3">

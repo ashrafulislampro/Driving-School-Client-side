@@ -45,21 +45,21 @@ const Review = () => {
       });
   };
   return (
-    <section className=" container-fluid">
-      <div className="row review_section">
-        <div className="col-md-2">
+    <section className="container-fluid">
+      <div className="row">
+        <div className="col-sm-12 col-md-4 col-lg-2">
           <Sidebar></Sidebar>
         </div>
-        <div className="col-md-8">
-          <div className="d-flex justify-content-between pt-4 pb-2 ms-5">
+        <div className="col-sm-12 col-md-8 col-lg-8">
+          <div className="d-flex justify-content-between booking_list">
             <h4 style={{ color: "#3A4256", fontWeight: "700" }}>Review</h4>
             <h4 style={{ color: "#3A4256", fontWeight: "700" }}>
               {loggedInUser.name}
             </h4>
           </div>
           <div className="common_area">
-            <div className="col-md-4 ms-5 pt-5">
-              <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="col-sm-12 col-md-10 col-lg-8">
+              <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
                 <input
                   type="text"
                   placeholder="Your Name"

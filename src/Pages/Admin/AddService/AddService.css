@@ -1,6 +1,6 @@
 .content{
-        width: 60vw;
-        height: 35vh; 
+        width: 65vw;
+        height: 50vh; 
         padding: 20px 0 0 30px;
         border-radius: 10px;
         background-color: #fff; 
@@ -12,6 +12,7 @@
 .upload-image{
           position: relative;
           display: inline-block;
+          margin-left: 30px;
 }
 .upload_button{
           width: 170px;
@@ -28,7 +29,7 @@
 }
 .add_submit{
           float: right;
-          margin-right: 215px;
+          margin-right: 290px;
           width: 150px;
           height: 40px;
           background-color: rgb(62, 190, 37);
@@ -37,4 +38,245 @@
           color: white;
           font-weight: bold;
           font-size: 17px;
+}
+.service_area{
+        background: rgb(241, 235, 235);
+        height: 80%;
+        width: 100%;
+        
+}
+.header_text{
+        margin-top: 20px;
+}
+.price_input{
+        margin-left: 30px;
+}
+.description_input{
+        width: 530px !important;
+}
+.service_input{
+        width: 530px !important;
+        height: 43px !important;
+}
+.add_Service{
+        padding: 30px 0 0 40px; 
+}
+.second_part{
+        display: flex;
+        margin-top: 30px;
+}
+@media screen and (max-width: 1300px){
+        .service_area{
+                height: 100% !important;
+        }
+        .content{
+                height: 100% !important;
+                padding-bottom: 5px;
+        }
+        .add_Service{
+                padding: 30px 0 0 0; 
+        }
+        .description_input{
+                width: 400px !important;
+        }
+        .price_input{
+                margin-left: 30px;
+        }
+        .upload-image{
+                margin-left: 30px;
+        }
+        .second_part{
+                display: flex;
+                margin-top: 30px;
+        }
+        .add_submit{
+                margin: auto;
+        }
+        .service_input{
+                width: 400px !important;
+                height: 43px !important;
+        }
+        .header_text{
+                margin-top: 15px;
+        }
+}
+@media screen and (max-width: 1120px){
+        .service_area{
+                height: 100% !important;
+        }
+        .content{
+                height: 100% !important;
+                padding-bottom: 5px;
+        }
+        .add_Service{
+                padding: 30px 0 0 0; 
+        }
+        .description_input{
+                width: 430px !important;
+        }
+        .add_submit{
+                margin: auto;
+        }
+        .price_input{
+                margin-left: 0;
+        }
+        .second_part{
+                display: flex;
+                flex-direction: column;
+        }
+        .upload-image{
+                margin-left: 0;
+        }
+        .service_input{
+                width: 430px !important;
+                height: 43px !important;
+        }
+        .header_text{
+                margin-top: 15px;
+        }
+}
+@media screen and (max-width: 920px){
+        .service_area{
+                height: 100% !important;
+        }
+        .content{
+                height: 100% !important;
+                padding-bottom: 5px;
+        }
+        .add_Service{
+                padding: 30px 0 0 0; 
+        }
+        .description_input{
+                width: 400px !important;
+        }
+        .add_submit{
+                margin: auto;
+        }
+        .price_input{
+                margin-left: 0;
+        }
+        .second_part{
+                display: flex;
+                flex-direction: column;
+        }
+        .upload-image{
+                margin-left: 0;
+        }
+        .service_input{
+                width: 400px !important;
+                height: 43px !important;
+        }
+        .header_text{
+                margin-top: 15px;
+        }
+}
+@media screen and (max-width: 810px){
+        .service_area{
+                height: 100% !important;
+        }
+        .content{
+                height: 100% !important;
+                padding-bottom: 5px;
+        }
+        .second_part{
+                display: flex;
+                flex-direction: column;
+        }
+        .upload-image{
+                margin-left: 0;
+        }
+        .price_input{
+                margin-left: 0;
+        }
+        .service_input{
+                height: 43px !important;
+                width: 370px !important;
+        }
+        .add_Service{
+                padding: 20px 0 0 0; 
+        }
+        .description_input{
+                width: 370px !important;
+        }
+        .add_submit{
+                margin: auto;
+        }
+        .header_text{
+                margin-top: 15px;
+        }
+}
+@media screen and (max-width: 610px){
+        .service_area{
+                height: 100% !important;
+        }
+        .content{
+                height: 100% !important;
+                padding-bottom: 5px;
+        }
+        .service_input{
+                height: 43px !important;
+                width: 340px !important;
+        }
+        .add_Service{
+                padding: 5px 0 0 0; 
+        }
+        .description_input{
+                width: 330px !important;
+        }
+        .add_submit{
+                margin: auto;
+        }
+        .header_text{
+                margin-top: 15px;
+        }
+}
+@media screen and (max-width: 375px){
+        .service_area{
+                height: 100% !important;
+        }
+        .service_input{
+                height: 43px !important;
+                width: 330px !important;
+        }
+        .content{
+                height: 100% !important;
+                padding-bottom: 5px;
+        }
+        .add_Service{
+                padding: 5px 0 0 0; 
+        }
+        .description_input{
+                width: 330px !important;
+        }
+        .add_submit{
+                margin: auto;
+        }
+        .header_text{
+                margin-top: 15px;
+        }
+}
+@media screen and (max-width: 375px){
+        .service_area{
+                height: 100% !important;
+        }
+        .service_input{
+                height: 43px !important;
+                width: 320px !important;
+        }
+        .content{
+                height: 100% !important;
+                padding-bottom: 5px;
+        }
+        .add_Service{
+                padding: 5px 0 0 0; 
+        }
+        .description_input{
+                width: 320px !important;
+        }
+        .add_submit{
+                margin: auto;
+        }
+        .header_text{
+                margin-top: 15px;
+        }
 }

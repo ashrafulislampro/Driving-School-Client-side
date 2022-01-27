@@ -15,6 +15,9 @@
           display: inline-block;
           margin-top: 5px;
 }
+.form-container{
+          padding: 40px 0 0 40px;
+}
 .upload_btn{
           width: 150px;
           height: 40px;
@@ -32,4 +35,48 @@
           left: 5px;
           width: 140px;
           opacity: 0; 
+}
+@media screen and (max-width: 1300px){
+          .form-container{
+                    padding: 40px 0 0 40px;
+          }
+          .common_area{
+                    height: 50%;
+                    width: 100%;
+          }
+          .booking_list h4{
+                    font-size: 20px;
+          }
+}
+@media screen and (max-width: 810px){
+          .form-container{
+                    padding: 30px 0 0 30px;
+          }
+          .common_area{
+                    height: 50%;
+                    width: 100%;
+          }
+          .booking_list h4{
+                    font-size: 20px;
+          }
+}
+@media screen and (max-width: 600px){
+          .form-container{
+                    padding: 10px;
+          }
+          .common_area{
+                    height: 100%;
+                    width: 100%;
+          }
+          .booking_list h4{
+                    font-size: 18px;
+          }
+}
+@media screen and (max-width: 375px){
+          .form-container{
+                    padding: 10px;
+          }
+          .booking_list h4{
+                    font-size: 16px;
+          }
 }

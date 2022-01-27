@@ -6,3 +6,91 @@
           font-weight: 700;
           border-color: transparent;
 }
+.admin_area{
+          background: rgb(241, 235, 235);
+          height: 80%;
+          width: 100%; 
+          padding: 40px;  
+}
+.common-input{
+          width: 400px !important;
+          height: 43px !important;
+          margin-bottom: 10px;
+}
+@media screen and (max-width: 1310px){
+          .content{
+                    width: 90%;
+                    padding: 20px;
+                    margin: 0px 0px 0 30px;
+          }
+          .common-input{
+                    width: 360px !important;
+                    height: 43px !important;
+                    margin-bottom: 10px;
+          }
+          
+}
+@media screen and (max-width: 1110px){
+          .content{
+                    width: 90%;
+                    padding: 15px;
+                    margin: 0px 0px 0 30px;
+          }
+          .common-input{
+                    width: 330px !important;
+                    height: 43px !important;
+                    margin-bottom: 10px;
+          }
+          .admin_area{
+                    padding: 20px 0 0 0;
+          }
+}
+@media screen and (max-width:810px){
+          .content{
+                    width: 90%;
+                    padding: 10px;
+                    margin: 0px 0px 0 30px;
+          }
+          .common-input{
+                    width: 340px !important;
+                    height: 43px !important;
+                    margin-bottom: 10px;
+          }
+          .admin_area{
+                    padding: 20px 0 0 0;
+          }
+}
+@media screen and (max-width: 610px){
+          .content{
+                    width: 97%;
+                    padding: 5px;
+                    margin: 5px 5px 0 5px;
+          }
+          .admin_btn{
+                    width: 130px;
+          }
+          .common-input{
+                    width: 330px!important;
+                    margin-bottom: 10px;
+          }
+}
+@media screen and (max-width: 375px){
+          .content{
+                    width: 97%;
+                    padding: 5px;
+                    margin: 5px 5px 0 5px;
+          }
+          .admin_btn{
+                    width: 130px;
+          }
+          .common-input{
+                    width: 330px !important;
+                    height: 43px !important;
+                    margin-bottom: 10px;
+          }
+}
+@media screen and (max-width: 360px){
+          .common-input{
+                    width: 320px!important;
+          }
+}

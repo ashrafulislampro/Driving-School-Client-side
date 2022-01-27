@@ -18,7 +18,7 @@ import firebaseConfig from "./firebase-config";
 import Navbar1 from "../Home/Header/Navbar/Navbar1";
 
 const Registration = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [setLoggedInUser] = useContext(UserContext);
   const app = initializeApp(firebaseConfig);
   const history = useHistory();
   const location = useLocation();
@@ -62,7 +62,7 @@ const Registration = () => {
           setUserInfo(newUserInfo);
           updateUserProfileName(userInfo.name);
           setLoggedInUser(newUserInfo);
-          storeAuthToken();
+          // storeAuthToken();
           history.replace(from);
         })
         .catch((error) => {
@@ -97,7 +97,7 @@ const Registration = () => {
         const { displayName, email } = result.user;
         const newUserInfo = { name: displayName, email };
         setLoggedInUser(newUserInfo);
-        storeAuthToken();
+        // storeAuthToken();
         history.replace(from);
       })
       .catch((error) => {
@@ -118,7 +118,7 @@ const Registration = () => {
         const { displayName, email } = result.user;
         const newUserInfo = { name: displayName, email };
         setLoggedInUser(newUserInfo);
-        storeAuthToken();
+        // storeAuthToken();
         history.replace(from);
       })
       .catch((error) => {
@@ -130,23 +130,28 @@ const Registration = () => {
   };
 
   //   verify id token
-  const storeAuthToken = () => {
-    const auth = getAuth(app);
-    auth.currentUser
-      .getIdToken(/* forceRefresh */ true)
-      .then(function (idToken) {
-        console.log(idToken);
-        sessionStorage.setItem("token", idToken);
-        history.replace(from);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
+  // const storeAuthToken = () => {
+  //   const auth = getAuth(app);
+  //   auth.currentUser
+  //     .getIdToken(/* forceRefresh */ true)
+  //     .then(function (idToken) {
+  //       console.log(idToken);
+  //       sessionStorage.setItem("token", idToken);
+  //       history.replace(from);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // };
   return (
-    <div className="row d-flex justify-content-center login_section">
+    <div className="login_section">
+      
+      <div className="container">
       <Navbar1></Navbar1>
-      <div>
+      <div className="row">
+        <div className="col-sm-12 col-md-12 col-lg-12">
+
+        
         <div className="form_container">
           <form className="ship_form" onSubmit={handleFormSubmit}>
             <h3>Create an account</h3>
@@ -200,7 +205,8 @@ const Registration = () => {
           <span>continue with google</span>
         </button>
       </div>
-     
+      </div>
+      </div>
     </div>
   );
 };
