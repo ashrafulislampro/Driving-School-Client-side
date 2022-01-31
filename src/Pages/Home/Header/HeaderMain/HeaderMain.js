@@ -5,6 +5,7 @@ import icon from '../../../../images/car-compact.png';
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import './HeadersMain.css';
+import Zoom from 'react-reveal';
 const HeaderMain = () => {
   const history = useHistory();
   const handleBookButton =()=>{
@@ -23,6 +24,7 @@ const HeaderMain = () => {
     <section className="header_container">
     <div className="container">
       <div className="row">
+      <Zoom>
         <div className="col-sm-12 col-md-6 col-lg-8">
           <div className="header_text">
           <h3>WELCOME TO DRIVE ONE</h3>
@@ -114,6 +116,7 @@ const HeaderMain = () => {
             </form>
           </div>
         </div>
+        </Zoom>
       </div>
       </div>
     </section>

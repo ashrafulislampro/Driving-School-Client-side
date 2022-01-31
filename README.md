@@ -18,3 +18,5 @@ Swiper.js
 Firebase
 
 Axios
+
+React-Reveal

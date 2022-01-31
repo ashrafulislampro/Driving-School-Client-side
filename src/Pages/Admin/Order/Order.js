@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
 import NativeSelect from "@mui/material/NativeSelect";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 const Order = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [orders, setOrders] = useState([]);
@@ -28,7 +29,10 @@ const Order = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("Update Status Successfully");
+          toast("Update Status Successfully", {type: "success"});
+        }
+        else{
+          toast("Update Status Failed", { type: "error"})
         }
       });
   };
@@ -40,6 +44,7 @@ const Order = () => {
           <Sidebar2></Sidebar2>
         </div>
         <div className="col-sm-12 col-md-9 col-lg-10">
+        <ToastContainer/>
           <div className="d-flex justify-content-between pt-4 pb-2 ms-5">
             <h4 style={{ color: "#3A4256", fontWeight: "700" }}>Order List</h4>
             <h4 style={{ color: "#3A4256", fontWeight: "700" }}>
@@ -68,7 +73,6 @@ const Order = () => {
                       <Box sx={{ minWidth: 120 }}>
                         <FormControl fullWidth>
                           <NativeSelect
-                            // onClick={handleStatusId(item._id)}
                             onChange={(e) => handleStatus(e, `${item._id}`)}
                             defaultValue={30}
                             inputProps={{

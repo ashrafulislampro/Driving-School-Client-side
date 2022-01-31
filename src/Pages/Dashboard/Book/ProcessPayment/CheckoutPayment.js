@@ -1,11 +1,11 @@
 import React from "react";
 import axios from "axios";
-import { toast } from "react-toastify";
+import {ToastContainer, toast } from "react-toastify";
 import StripeCheckout from "react-stripe-checkout";
 import "react-toastify/dist/ReactToastify.css";
-import { useState } from "react";
+
 const CheckoutPayment = ({course}) => {
-  toast.configure();
+  // toast.configure();
   
   const handleToken = async (token) => {
     const response = await axios.post("https://gentle-gorge-81848.herokuapp.com/checkout", {
@@ -29,6 +29,7 @@ const CheckoutPayment = ({course}) => {
         billingAddress
         shippingAddress
       />
+       <ToastContainer/>
     </div>
   );
 };

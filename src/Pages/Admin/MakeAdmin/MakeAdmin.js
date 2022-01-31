@@ -3,6 +3,7 @@ import { UserContext } from "../../../App";
 import Sidebar2 from "../../Sidebar/Sidebar2";
 import "./MakeAdmin.css";
 import { useForm } from "react-hook-form";
+import { ToastContainer, toast } from "react-toastify";
 const MakeAdmin = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const { register, handleSubmit } = useForm();
@@ -16,7 +17,11 @@ const MakeAdmin = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("Added New Admin Successfully");
+          document.getElementById('email').value = "";
+          toast("Added New Admin Successfully", {type: "success"});
+        }
+        else{
+          toast("Failed To add Admin", {type: "error"});
         }
       });
   };
@@ -27,6 +32,7 @@ const MakeAdmin = () => {
           <Sidebar2></Sidebar2>
         </div>
         <div className="col-sm-12 col-md-9 col-lg-10">
+        <ToastContainer/>
           <div className="d-flex justify-content-between pt-4 pb-2 ms-5">
             <h4 style={{ color: "#3A4256", fontWeight: "700" }}>Make Admin</h4>
             <h4 style={{ color: "#3A4256", fontWeight: "700" }}>
@@ -47,6 +53,7 @@ const MakeAdmin = () => {
                       type="email"
                       placeholder="Enter E-mail"
                       name="email"
+                      id="email"
                       className="form-control common-input"
                       required
                       {...register("email", { required: true })}

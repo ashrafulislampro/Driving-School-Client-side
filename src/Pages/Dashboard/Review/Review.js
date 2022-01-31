@@ -4,6 +4,7 @@ import Sidebar from "../../Sidebar/Sidebar";
 import "./Review.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 const Review = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [imageUrl, setImageUrl] = useState(null);
@@ -24,7 +25,13 @@ const Review = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("Send Your Review Successfully");
+          document.getElementById('name').value = "";
+          document.getElementById('title').value = "";
+          document.getElementById('description').value = "";
+          toast("Send Your Review Successfully", {type: "success"});
+        }
+        else{
+          toast("Your Review Send Failed", {type: "error"});
         }
       });
   };
@@ -51,6 +58,7 @@ const Review = () => {
           <Sidebar></Sidebar>
         </div>
         <div className="col-sm-12 col-md-8 col-lg-8">
+        <ToastContainer/>
           <div className="d-flex justify-content-between booking_list">
             <h4 style={{ color: "#3A4256", fontWeight: "700" }}>Review</h4>
             <h4 style={{ color: "#3A4256", fontWeight: "700" }}>
@@ -62,6 +70,7 @@ const Review = () => {
               <form className="form-container" onSubmit={handleSubmit(onSubmit)}>
                 <input
                   type="text"
+                  id="name"
                   placeholder="Your Name"
                   className="form-control book-input"
                   required
@@ -70,6 +79,7 @@ const Review = () => {
 
                 <input
                   type="text"
+                  id="title"
                   placeholder="Company's name or Designation"
                   className="form-control book-input mt-3"
                   required
@@ -80,6 +90,7 @@ const Review = () => {
                   type="message"
                   placeholder="Description"
                   rows="5"
+                  id="description"
                   className="form-control mt-3"
                   required
                   {...register("description", { required: true })}

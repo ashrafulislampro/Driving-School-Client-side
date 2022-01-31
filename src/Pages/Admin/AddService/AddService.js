@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import upload from "../../../images/cloud-upload-outline 1.png";
 import axios from "axios";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 const AddService = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const [imageURL, setImageURL] = useState(null);
@@ -25,7 +26,13 @@ const AddService = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("Added New Service Successfully");
+          document.getElementById("title").value = "";
+          document.getElementById("price").value = "";
+          document.getElementById("description").value = "";
+          toast("Added New Service Successfully", {type: "success"});
+        }
+        else{
+          toast("Failed to Add New Service", {type: "error"})
         }
       });
   };
@@ -48,6 +55,7 @@ const AddService = () => {
           <Sidebar2></Sidebar2>
         </div>
         <div className="col-sm-12 col-md-9 col-lg-10">
+        <ToastContainer/>
           <div className="d-flex justify-content-between header_text">
             <h4 style={{ color: "#3A4256", fontWeight: "700" }}>Add Service</h4>
             <h4 style={{ color: "#3A4256", fontWeight: "700" }}>
@@ -68,6 +76,7 @@ const AddService = () => {
                       type="text"
                       placeholder="Enter Title"
                       name="title"
+                      id="title"
                       className="form-control service_input"
                       required
                       {...register("title", { required: true })}
@@ -84,6 +93,7 @@ const AddService = () => {
                     <input
                       type="number"
                       name="price"
+                      id="price"
                       placeholder="Enter Price"
                       className="form-control service_input"
                       required
@@ -104,6 +114,7 @@ const AddService = () => {
                         placeholder="Enter Description"
                         rows="5"
                         cols="53"
+                        id="description"
                         name="description"
                         className="form-control description_input"
                         required
@@ -115,7 +126,7 @@ const AddService = () => {
                       style={{ color: "#3A4256", fontWeight: "700" }}
                       htmlFor="image"
                     >
-                      Image
+                      Upload Car Icon
                       <br />
                       <input
                         onChange={handleImageUpload}
